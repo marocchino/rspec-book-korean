@@ -12,15 +12,15 @@ class Marker
     @guess = guess.split("").map(&:to_i)
   end
 
-  def match_numbers
-    @secret & @guess
+  def exact_match_count
+    (0..3).select { |i| @secret[i] == @guess[i] }.size
   end
 
-  def exact_match_count
-    match_numbers.select { |i| @secret.index(i) == @guess.index(i) }.size
+  def total_match_count
+    @secret.select { |i| @guess.include?(i) }.size
   end
 
   def number_match_count
-    match_numbers.size - exact_match_count
+    total_match_count - exact_match_count
   end
 end

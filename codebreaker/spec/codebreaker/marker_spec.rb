@@ -40,6 +40,13 @@ module Codebreaker
         end
       end
 
+      context "with 1 exact match duplicated in guess" do
+        it "return 0" do
+          marker.guess = '1155'
+          expect(marker.number_match_count).to be(0)
+        end
+      end
+
       context "with 1 exact match" do
         it "return 0" do
           marker.guess = '1555'
