@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), "/../spec_helper")
+require "spec_helper"
 module Codebreaker
   describe Game do
     let(:output) { double("output").as_null_object }
