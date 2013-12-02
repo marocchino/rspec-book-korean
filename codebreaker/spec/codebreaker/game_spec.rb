@@ -6,11 +6,11 @@ module Codebreaker
       let(:game) { Game.new(output) }
       it "send a welcome message" do
         output.should_receive(:puts).with("코드 브레이커!")
-        game.start
+        game.start('1234')
       end
       it "prompts for 1st guess" do
         output.should_receive(:puts).with("입력:")
-        game.start
+        game.start('1234')
       end
     end
   end
