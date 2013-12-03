@@ -1,4 +1,4 @@
-먼저(/^영화가 있다면$/) do
+먼저(/^영화가 있습니다$/) do
   @movie = Movie.create!
 end
 

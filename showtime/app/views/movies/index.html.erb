@@ -1,0 +1,8 @@
+<%= link_to "Add Movie", new_movie_path %>
+<% @genres.each do |genre| %>
+  <%= link_to genre.name, movies_path(genre_id: genre.id) %>
+<% end %>
+<% @movies.each do |movie| %>
+  <%= movie.title %>
+<% end %>
+<%= @movies.size %> movies
