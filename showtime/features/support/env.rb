@@ -8,7 +8,9 @@ require 'cucumber/rails'
 require "webrat"
 
 Webrat.configure do |config|
-  config.mode = :rack
+  config.mode = :selenium
+  #optional:
+  config.application_framework = :rack # could also be :merb. Defaults to :rails
 end
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any

@@ -14,6 +14,6 @@ end
 그러면(/^Caddychark 는 Comedy 장르여야 합니다$/) do
   visit movies_path
   click_link "Comedy"
-  expect(page).to contain("1 movies")
-  expect(page).to contain("Caddychark")
+  expect(page).to have_content("1 movies")
+  expect(page).to have_content("Caddychark")
 end
